@@ -1,0 +1,33 @@
+---
+title: "Coursera Data Science Specialization - Developing Data Products Week 2"
+author: "pwuestli, 22.12.2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+Goal of this project is to create a web page using R Markdown that features a map created with Leaflet. I'm going to display two schools and an university I used attend.
+
+
+```{r}
+library(leaflet)
+coords   <- data.frame( lat = c(51.34794905, 51.3763521, 51.31412275  )
+                     , lng = c(12.44993841, 12.41678036, 12.37296856  ) )
+
+popups <- c(
+  "<a href='https://www.24gs.de/'>24. Grundschule Leipzig</a>",
+  "<a href='https://cms.sachsen.schule/gymlbrock/start/'>F.-A.-Brockhaus Gymnasium</a>",
+  "<a href='https://www.htwk-leipzig.de/startseite/'>Hochschule für Technik, Wirtschaft und Kultur Leipzig</a>"
+)
+
+icon <- makeIcon( "graduate-cap.png", 32, 32)
+
+mp <- coords %>% 
+  leaflet() %>%
+  addTiles() %>% setView(lng = 12.41, lat = 51.34,  zoom = 12) %>% 
+  addMarkers(icon=icon, popup = popups)
+mp
+```
+
