@@ -1,0 +1,12 @@
+name: Insulin_Calculator
+title: Insulin_Calculator
+username:
+account: pwuestli
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 638595
+bundleId: 1810762
+url: https://pwuestli.shinyapps.io/Insulin_Calculator/
+when: 1547313795.42836
+asMultiple: FALSE
+asStatic: FALSE

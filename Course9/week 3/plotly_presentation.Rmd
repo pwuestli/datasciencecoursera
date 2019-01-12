@@ -1,0 +1,31 @@
+---
+title: "Demographic development of Chemnitz, Dresden and Leipzig since 1945"
+author: "pwuestli, 28.12.2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Content
+The following plot shows the development of the population of Chemnitz, Dresden and Leipzig, the three biggest cities in saxony, germany.
+
+Sources for the population (date: 28.12.2018):  
+- Chemnitz: <a href ="https://de.wikipedia.org/wiki/Einwohnerentwicklung_von_Chemnitz">Wikipedia</a>  
+- Dresden:  <a href ="https://de.wikipedia.org/wiki/Einwohnerentwicklung_von_Dresden">Wikipedia</a>  
+- Leipzig:  <a href ="https://de.wikipedia.org/wiki/Einwohnerentwicklung_von_Leipzig">Wikipedia</a>  
+
+## Demographic development
+
+```{r plot, warning=FALSE, message=FALSE}
+library(plotly)
+library(reshape2)
+setwd("C:/Users/Philipp/Downloads/Coursera/Git/Course9")
+population<-read.csv("bevoelkerung.csv", sep = ";")
+population<-melt(population,id.var = 'Year')
+plot<-ggplot(na.omit(population), aes(x = Year, y = value, color = variable)) + geom_line() + geom_point() + labs( y = "Population in thousand", color="City")
+ggplotly(plot)
+```
+
+
