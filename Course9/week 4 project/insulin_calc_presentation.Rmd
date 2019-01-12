@@ -45,5 +45,5 @@ This app gives a small idea on how to calculate insuline, a task people with dia
 If you want to try the app please go here: <a href='https://pwuestli.shinyapps.io/Insulin_Calculator/'> Insulin Calculator</a>.
 <br>
 <br>
-If you want to have a look at the source code you can find in on <a href='https://pwuestli.shinyapps.io/Insulin_Calculator/'> Github</a>.
+If you want to have a look at the source code you can find in on <a href='https://github.com/pwuestli/datasciencecoursera/tree/master/Course9/week%204%20project'> Github</a>.
 
